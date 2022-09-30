@@ -1,3 +1,6 @@
+4-VARIANT
+
+
 1. Pythonda turli xil fayl turlari bilan isolas imkoniyati mavjud,
     ularni 2 xilga bo’lish mumkin. Mat fayllari masalan cvs, txt, html va 
     boshqa matn shaklida ma’lumot saqlaydigan barcha fayllarni o’z ichiga oladi. 
