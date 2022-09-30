@@ -11,10 +11,10 @@ def start(update: Update, context: CallbackContext):
 
 def help_command(update: Update, context: CallbackContext):
     update.message.reply_text("Buyruqlar ro'yxati:")
-    update.message.reply_text('/Qoshish <1-son> <2-son>')
-    update.message.reply_text('/Ayirish <1-son> <2-son>')
-    update.message.reply_text('/Kopaytirish <1-son> <2-son>')
-    update.message.reply_text("/Bolish <1-son> <2-son>")
+    update.message.reply_text('/add <1-Num> <2-Num>')
+    update.message.reply_text('/subtract <1-Num> <2-Num>')
+    update.message.reply_text('/multiply <1-Num> <2-Num>')
+    update.message.reply_text("/divide <1-Num> <2-Num>")
 
 
 
