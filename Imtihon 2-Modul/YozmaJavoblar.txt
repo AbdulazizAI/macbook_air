@@ -1,0 +1,73 @@
+1. Pythonda turli xil fayl turlari bilan isolas imkoniyati mavjud,
+    ularni 2 xilga bo’lish mumkin. Mat fayllari masalan cvs, txt, html va 
+    boshqa matn shaklida ma’lumot saqlaydigan barcha fayllarni o’z ichiga oladi. 
+    Binar fayllar tasvirlar, audio va video fayllardan iborat. 
+    Fall turiga qarab u bilan isolas biroz farq qilishi mumkin. 
+
+	Argument:	    Qoʻllanilishi:				Mazmuni:
+
+	‘w’  			open('file.txt','w')	    Faylni yozish uchun ochish. Fayl mavjud bo'lmasa yangi fayl 											yaratiladi. Fayl mavjud bo'lsa 											tarkibi o'chib ketadi
+
+	'r'			    open('file.txt','r')		Faylni faqat o'qish uchun ochish (yozib bo'lmaydi)
+
+	'w+'			open('file.txt','w+')		Faylni o'qish va yozish uchun 	ochish. Fayl mavjud bo'lmasa yangi 										fayl yaratiladi. Fayl mavjud bo'lsa 										tarkibi o'chib ketadi.
+
+	'r+'			open('file.txt','r+')		Faylni o'qish va yozish uchun ochish. Fayl mavjud bo'lmasa yangi 										fayl yaratiladi. Fayl mavjud bo'lsa 										tarkibi o'chib ketadi.
+
+	'a'			    open('file.txt','a')		Faylga ma'lumot qo'shish uchun ochish. Fayl mavjud bo'lmasa yangi 										fayl yaratiladi.
+
+	'a+'			open('file.txt','a+')		Faylga ma'lumot qo'shish va o'qish uchun yozish. Fayl mavjud 												bo'lmasa yangi fayl yaratiladi.
+
+2. Django-admin haqida bilishdan oldin Django nimaligini bilib olsak.
+     Django asosiy maqsadi ma’lumotlar bazasiga asoslangan murakkab web saytlarni yaratishni yengillashtirrish hisoblanadi. 
+     Bu pythonning bir frameworki hisoblanadi. Django-admin esa bu eng muhim vazifalardan birini bajaradi. 
+     Biz Django-admin ichida bizning loyihaga kerakli eng muhim fallar joylashgan hisoblanadi va 
+     biz manage.py file orqali har-xil amallarni bajaramiz. Django-admindan so’ng biz manage.py file yordamida application yaratib 
+     o’z loyihamizni amalga oshiramiz
+
+Example:
+
+	from django.contrib import admin
+	from app.models import Yangilik
+
+	class YangilikAdmin(admin.ModelAdmin):
+    		pass
+	admin.site.register(Yangilik, YangilikAdmin)
+
+	Yoki:
+
+	from django.contrib import admin
+	from .models import Yangilik
+
+	@admin.register(Yangilik)
+	class YangilikAdmin(admin.ModelAdmin):
+    		pass
+
+
+3. Numpy bu massivlar bilan ishlash uchun ishlatiladigan Python kutubxonasi. 
+Bundan tashqari Numpy chiziqli algebra, matritsalar bilan ishlash uchun tayyor funktsiyalariga ega kutubxona. 
+Numpy 2005 yilda Travis Oliphant tomonidan yaratilgan va bu opensource yani ochiq manba xisoblanadi va uni tekinga ishlatishimiz mumkin.  
+Shuningdek Numpy royxatlardan ko’ra tezroq ishlaydi. Numpy Python kutubxonasi va qisman Pythonda yozilgan, 
+lekin tez ishlashini talab qiladigan qismlarning aksariyati C yoki C++ da yozilgan.
+	
+Example:
+	
+	import numpy 
+
+	arr = numpy.array([1, 2, 3, 4, 5]) 
+
+	print(arr)
+	
+	Massivlar qancha o'lchamga ega ekanligini tekshirish:
+
+	import numpy as np
+
+	a = np.array(42)
+	b = np.array([1, 2, 3, 4, 5])
+	c = np.array([[1, 2, 3], [4, 5, 6]])
+	d = np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]])
+
+	print(a.ndim) 
+	print(b.ndim) 
+	print(c.ndim) 
+	print(d.ndim)
